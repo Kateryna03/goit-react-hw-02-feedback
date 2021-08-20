@@ -1,0 +1,13 @@
+ul {
+  border-color: aqua;
+  display: flex;
+  flex-direction: column;
+}
+.item {
+  background-color: bisque;
+  list-style: none;
+  display: flex;
+}
+p {
+  display: flex;
+}
