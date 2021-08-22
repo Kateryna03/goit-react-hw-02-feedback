@@ -1,19 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-const Buttons = ({ state, handleIncrement, name }) => {
+import styles from './Buttons.module.css';
+const Buttons = ({ state, handleIncrement }) => {
   // console.log(name);
   return (
-    <button key={state} type="button" onClick={handleIncrement}>
-      {name}
-    </button>
-
-    // {/* <button type="button" onClick={handleIncrement}>
-    //   {state.neutral}
-    // </button>
-    // <button type="button" onClick={handleIncrement}>
-    //   {state.bad}
-    //     </button> */}
+    <ul className={styles.buttonList}>
+      {Object.keys(state).map(item => (
+        <li className={styles.item} key={item}>
+          <button type="button" onClick={handleIncrement}>
+            {item}
+          </button>
+        </li>
+      ))}
+    </ul>
   );
 };
 
