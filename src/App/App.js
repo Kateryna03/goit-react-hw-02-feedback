@@ -28,16 +28,16 @@ class App extends Component {
   countTotalFeedback = e => {
     // const target = e.target.value;
     // console.log(target);
-    // return Object.keys(this.state).reduce(
-    //   (acc, value) => acc + this.state[value],
-    //   0,
-    // );
-    let sum = 0;
-    for (let value of Object.values(this.state)) {
-      sum += value;
-    }
+    return Object.keys(this.state).reduce(
+      (acc, value) => acc + this.state[value],
+      0,
+    );
+    //   let sum = 0;
+    //   for (let value of Object.values(this.state)) {
+    //     sum += value;
+    //   }
 
-    return sum;
+    //   return sum;
   };
 
   countPositiveFeedbackPercentage = () => {
